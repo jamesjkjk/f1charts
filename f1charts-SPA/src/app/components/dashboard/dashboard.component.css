@@ -1,0 +1,11 @@
+
+
+.grid-container {
+  display: flex;
+  height: 100%; /* Ensure the grid container takes up the full height of its container */
+}
+
+app-driver-list {
+  width: 300px;
+  overflow-y: auto; /* Enable vertical scrolling within the driver list */
+}

@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="sidebar">
+    <app-driver-list></app-driver-list>
+  </div>
+  <mat-card class="main-content">
+    <div class="plot-container">
+      <app-plotly [data]="data" [title]="plotlyTitle" [xAxisTitle]="xAxisTitle" [yAxisTitle]="yAxisTitle"></app-plotly>
+    </div>
+  </mat-card>
+</div>

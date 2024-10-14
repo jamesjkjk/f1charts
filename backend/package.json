@@ -1,0 +1,32 @@
+{
+  "name": "f1charts",
+  "version": "1.0.0",
+  "description": "nodeJS server that makes API calls for F1 data. Server will query and send historical data and mock live data using historical data.",
+  "main": "dist/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "tsx -r dotenv/config src/server.ts",
+    "test": "jest",
+    "clear-build": "rimraf --glob './dist'",
+    "build": "npm run clear-build & npm run build & npm run start-local",
+    "start:dev": "nodemon",
+    "start-local": "node -r dotenv/config dist/server.js",
+    "lint": "eslint --fix --config configs/.eslint.json --ignore-path configs/.eslintignore .",
+    "format": "prettier . --write --config configs/.prettierrc.json --ignore-path configs/.prettierignore"
+  },
+  "author": "James Kim",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2"
+  }
+}

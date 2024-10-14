@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  height: 78vh; /* Full viewport height */
+}
+
+.sidebar {
+  width: 300px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Arrange content vertically */
+  overflow: hidden; /* Prevent scrolling on the main content */
+}
+
+.plot-container {
+  flex: 1;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  overflow-y: auto; /* Enable vertical scrolling within the plot container */
+  padding: 10px; /* Add padding for better spacing */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}

@@ -1,0 +1,10 @@
+<!-- driver-list.component.html -->
+<div class="driver-list-container" *ngIf="drivers">
+  <h2>Drivers</h2>
+  <ul class="driver-list">
+    <li *ngFor="let driver of drivers" [ngClass]="{'unselected-driver': !driver.is_selected}" class="driver-list-item"
+      (click)="toggleSelection(driver)">
+      <app-driver [driver]="driver"></app-driver>
+    </li>
+  </ul>
+</div>

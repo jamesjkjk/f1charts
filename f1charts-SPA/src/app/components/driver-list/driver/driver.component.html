@@ -1,0 +1,16 @@
+<!-- driver.component.html -->
+<div class="driver-card" *ngIf="driver">
+  <img class="driver-headshot" [src]="driver.headshot_url" [ngStyle]="{'background-color': '#' + driver.team_colour}" alt="{{ driver.full_name }}">
+  <div class="driver-details">
+    <h3 class="driver-name">{{ driver.full_name }} ({{ driver.name_acronym }})</h3>
+    <p class="driver-team">Team: {{ driver.team_name }}</p>
+    <p class="driver-country">
+      Country:
+      <img [src]="'https://flagcdn.com/16x12/' + getCorrectCountryCode(driver.country_code) + '.png'"
+        [srcset]="'https://flagcdn.com/32x24/' + getCorrectCountryCode(driver.country_code) + '.png 2x, https://flagcdn.com/48x36/' + driver.country_code.toLowerCase() + '.png 3x'"
+        alt="{{ driver.country_code }}">
+      {{ driver.country_code }}
+    </p>
+    <p class="driver-number">Driver Number: {{ driver.driver_number }}</p>
+  </div>
+</div>

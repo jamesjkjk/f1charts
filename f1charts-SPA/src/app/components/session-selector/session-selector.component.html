@@ -1,0 +1,29 @@
+<form [formGroup]="filterForm" class="filter-form">
+  <mat-form-field appearance="fill">
+    <mat-label>Year</mat-label>
+    <mat-select formControlName="year" (selectionChange)="onYearSelected($event)">
+      <mat-option *ngFor="let year of years" [value]="year">{{ year }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Location</mat-label>
+    <mat-select formControlName="location" (selectionChange)="onCountrySelected($event)">
+      <mat-option *ngFor="let country of countries" [value]="country">{{ country }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Meeting</mat-label>
+    <mat-select formControlName="meeting" (selectionChange)="onMeetingSelected($event)">
+      <mat-option *ngFor="let meeting of meetings" [value]="meeting.meeting_key">{{ meeting.meeting_official_name }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Session</mat-label>
+    <mat-select formControlName="session" (selectionChange)="onSessionSelected($event)">
+      <mat-option *ngFor="let session of sessions" [value]="session.session_key">{{ session.session_name }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>

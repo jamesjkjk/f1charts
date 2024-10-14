@@ -1,0 +1,44 @@
+/* driver-list.component.css */
+.driver-list-container {
+    width: 100%;
+  }
+  
+  .driver-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .driver-list-item {
+    margin-bottom: 10px;
+  }
+  
+  /* Grid layout styles */
+  .grid-container .driver-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .grid-container .driver-list-item {
+    flex: 1 1 calc(33.333% - 20px); /* Three items per row */
+    box-sizing: border-box;
+  }
+  
+  .unselected-driver {
+    opacity: 0.5; /* Lighten the unselected drivers */
+  }
+  
+  @media (max-width: 768px) {
+    .grid-container .driver-list-item {
+      flex: 1 1 calc(50% - 20px); /* Two items per row on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .grid-container .driver-list-item {
+      flex: 1 1 100%; /* One item per row on very small screens */
+    }
+  }
+  

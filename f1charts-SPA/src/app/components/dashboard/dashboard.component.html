@@ -1,14 +1,22 @@
 <div class="dashboard-container">
+    <app-session-selector></app-session-selector>
     <mat-tab-group animationDuration="0ms" color="accent">
-      <mat-tab label="Results">
-        <app-session-selector></app-session-selector>
-        <app-results></app-results>
-      </mat-tab>
-      <mat-tab label="Drivers">
-        <app-session-selector></app-session-selector>
-        <div class="grid-container">
-          <app-driver-list></app-driver-list>
-        </div>
-      </mat-tab>
+        <mat-tab label="Results">
+            <ng-template matTabContent>
+                <app-results></app-results>
+            </ng-template>
+        </mat-tab>
+        <mat-tab label="Lap Comparison">
+            <ng-template matTabContent>
+                <app-lap-comparison></app-lap-comparison>
+            </ng-template>
+        </mat-tab>
+        <mat-tab label="Drivers">
+            <ng-template matTabContent>
+                <div class="grid-container">
+                    <app-driver-list></app-driver-list>
+                </div>
+            </ng-template>
+        </mat-tab>
     </mat-tab-group>
 </div>

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { FetchService } from '../fetch.service';
 import { Session } from 'src/app/models/Session';
+import { environment } from 'src/environments/environments';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ private sessions:Session[]=[]
   }
 
   async fetchSessions(meetingKey:number): Promise<Session[]> {
-    let url = 'http://localhost:8080/api/sessions'
+    let url = environment.apiUrl + '/api/sessions'
 
     if (!meetingKey) throw new Error("A meeting has not been selected")
     else {

@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Meeting } from 'src/app/models/Meeting';
 import { FetchService } from '../fetch.service';
+import { environment } from 'src/environments/environments';
 
 @Injectable()
 export class MeetingService {
-  private readonly DEFAULT_YEAR = 2023
+  private readonly DEFAULT_YEAR = 2024
   private readonly years = [2023, 2024]
 
   private meetings: Meeting[] = []
@@ -18,7 +19,7 @@ export class MeetingService {
   }
 
   async fetchCountries(): Promise<string[]> {
-    let url = 'http://localhost:8080/api/meetings'
+    let url = environment.apiUrl + '/api/meetings'
 
     if (!this.selectedYear) throw new Error("A year has not been selected")
     else {
@@ -31,7 +32,7 @@ export class MeetingService {
   }
 
   async fetchMeetings(): Promise<Meeting[]> {
-    let url = 'http://localhost:8080/api/meetings'
+    let url = environment.apiUrl + '/api/meetings'
     if (!this.selectedYear) throw new Error("A year has not been selected")
     else {
       url = url + `?year=${this.selectedYear}`

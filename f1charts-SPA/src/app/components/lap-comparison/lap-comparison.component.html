@@ -1,0 +1,25 @@
+<form [formGroup]="form" class="filter-form" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>Driver</mat-label>
+    <mat-select formControlName="driver1">
+      <mat-option *ngFor="let driver of drivers" [value]="driver">{{ driver.full_name }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Driver</mat-label>
+    <mat-select formControlName="driver2">
+      <mat-option *ngFor="let driver of drivers" [value]="driver">{{ driver.full_name }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Lap</mat-label>
+    <mat-select formControlName="lapnumber">
+      <mat-option *ngFor="let lap of getDistinctLapNumbers(laps)" [value]="lap">{{ lap }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+  <button mat-raised-button type="submit" color="accent">Submit</button>
+</form>
+<plotly-plot [data]="data" [layout]="layout" />

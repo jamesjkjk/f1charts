@@ -41,6 +41,7 @@ export class SessionSelectorComponent implements OnInit {
       this.filterForm.get("year")?.patchValue(this.meetingService.getSelectedYear())
       await this.fetchCountries(this.years[0]);
   }
+  
   setupFormValueChanges(): void {
     this.filterForm.get('year')?.valueChanges.subscribe(() => {
       this.filterForm.get('location')?.reset();

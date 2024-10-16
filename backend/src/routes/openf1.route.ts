@@ -19,7 +19,7 @@ router.get('/meetings', async (req, res) => {
     res.status(500).send('Internal Server Error');
   }
 });
-  
+
 router.get('/sessions', async (req, res) => {
   const { meeting_key } = req.query;
   let url = `https://api.openf1.org/v1/sessions?meeting_key=${meeting_key}`;
@@ -56,7 +56,34 @@ router.get('/laps', async (req, res) => {
   }
 });
 
-async function fetchData(url:string) {
+router.get('/car_data', async (req, res) => {
+  const { driver_number, session_key, date_start, date_end } = req.query
+
+  if (!driver_number) {
+    res.status(400).json({ error: "A driver has not been selected" });
+  }
+  if (!session_key) {
+    res.status(400).json({ error: "A session has not been selected" });
+  }
+
+  if (!date_start) {
+    res.status(400).json({ error: "A Start Date has not been selected" });
+  }
+
+  if (!date_end) {
+    res.status(400).json({ error: "A End Date has not been selected" });
+  }
+  let url = `https://api.openf1.org/v1/car_data?driver_number=${driver_number}&session_key=${session_key}&date>=${date_start}&date<=${date_end}`;
+  console.log(url)
+  try {
+    const data = await fetchData(url);
+    res.json(data);
+  } catch (error) {
+    res.status(500).send('Internal Server Error');
+  }
+})
+
+async function fetchData(url: string) {
   try {
     const response = await fetch(url);
     if (!response.ok) {

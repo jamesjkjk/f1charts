@@ -8,3 +8,17 @@
     overflow: auto;
     height: calc(100vh - 64px); 
 }
+.logo {
+    cursor:pointer;
+    font-size: 24px; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: #333; /* Text color */
+    text-transform: uppercase; /* Make the text uppercase */
+    letter-spacing: 2px; /* Add some spacing between letters */
+}
+.white{
+    color:white
+}
+.red{
+    color: red;
+}

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Driver } from 'src/app/models/Driver';
 import { FetchService } from '../fetch.service';
 import { Subject } from 'rxjs';
+import { environment } from 'src/environments/environments';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class DriverService {
   constructor(private fetchService: FetchService) { }
 
   async fetchDrivers(sessionKey: number): Promise<Driver[]> {
-    let url = 'http://localhost:8080/api/drivers'
+    let url = environment.apiUrl + '/api/drivers'
 
     if (!sessionKey) throw new Error("A session has not been selected")
     else {

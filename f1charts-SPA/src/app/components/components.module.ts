@@ -6,7 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
-
+import {MatButtonModule} from '@angular/material/button'
 import { PlotlyModule } from 'angular-plotly.js';
 import * as PlotlyJS from 'plotly.js-dist-min';
 
@@ -25,6 +25,7 @@ import { TestComponent } from './test/test.component';
 import { ResultsComponent } from './results/results.component';
 import { SessionSelectorComponent } from './session-selector/session-selector.component';
 import { PlotlyComponent } from './plotly/plotly.component';
+import { LapComparisonComponent } from './lap-comparison/lap-comparison.component';
 @NgModule({
   imports: [
     AppRoutingModule,
@@ -39,7 +40,8 @@ import { PlotlyComponent } from './plotly/plotly.component';
     MatTabsModule,
     MatIconModule,
     PlotlyModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule
   ],
   declarations: [
     DashboardComponent,
@@ -48,7 +50,8 @@ import { PlotlyComponent } from './plotly/plotly.component';
     TestComponent,
     ResultsComponent,
     SessionSelectorComponent,
-    PlotlyComponent
+    PlotlyComponent,
+    LapComparisonComponent
   ],
   exports:[
     DashboardComponent,

@@ -1,0 +1,7 @@
+.filter-form {
+    padding-top:15px;
+    padding-left:15px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }

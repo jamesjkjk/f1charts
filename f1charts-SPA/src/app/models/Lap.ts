@@ -15,5 +15,5 @@ export interface Lap {
     segments_sector_3: number[];
     session_key: number;
     st_speed: number;
-  }
-  
+    date_end?: string;
+}

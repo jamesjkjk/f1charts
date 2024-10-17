@@ -11,7 +11,9 @@ app.use(cors({
 app.use(express.json())
 // Define a port for the server to listen on
 const PORT = process.env.PORT || 8080;
-
+app.use('/',(req,res)=>{
+  res.send("Hello World")
+})
 app.use('/api', openf1Routes);
 
 // Start the server and listen on the specified port

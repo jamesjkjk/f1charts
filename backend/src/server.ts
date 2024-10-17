@@ -5,7 +5,9 @@ import openf1Routes from "./routes/openf1.route.js"
 const app = express();
 
 // Use CORS middleware
-app.use(cors());
+app.use(cors({
+  origin:"https://f1charts-frontend-ggd4haevc6h7btbm.westus-01.azurewebsites.net/"
+}));
 app.use(express.json())
 // Define a port for the server to listen on
 const PORT = process.env.PORT || 8080;

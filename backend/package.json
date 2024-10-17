@@ -8,7 +8,7 @@
     "start": "tsx -r dotenv/config src/server.ts",
     "test": "jest",
     "clear-build": "rimraf --glob './dist'",
-    "build": "npm run clear-build & tsc & npm run start-local",
+    "build": "npm run clear-build & tsc",
     "start:dev": "nodemon",
     "start-local": "node -r dotenv/config dist/server.js",
     "lint": "eslint --fix --config configs/.eslint.json --ignore-path configs/.eslintignore .",

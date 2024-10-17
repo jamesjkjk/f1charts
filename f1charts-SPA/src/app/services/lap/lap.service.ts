@@ -3,7 +3,7 @@ import { Lap } from 'src/app/models/Lap';
 import { FetchService } from '../fetch.service';
 import { Subject } from 'rxjs';
 import { Driver } from 'src/app/models/Driver';
-import { environment } from 'src/environments/environments';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'

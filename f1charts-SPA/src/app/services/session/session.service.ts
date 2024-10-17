@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { FetchService } from '../fetch.service';
 import { Session } from 'src/app/models/Session';
-import { environment } from 'src/environments/environments';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'

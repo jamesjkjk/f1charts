@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Driver } from 'src/app/models/Driver';
 import { FetchService } from '../fetch.service';
 import { Subject } from 'rxjs';
-import { environment } from 'src/environments/environments';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'

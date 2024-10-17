@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Meeting } from 'src/app/models/Meeting';
 import { FetchService } from '../fetch.service';
-import { environment } from 'src/environments/environments';
+import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class MeetingService {

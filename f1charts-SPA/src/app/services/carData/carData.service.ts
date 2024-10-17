@@ -3,7 +3,7 @@ import { FetchService } from '../fetch.service';
 import { CarData } from 'src/app/models/CarData';
 import { Subject } from 'rxjs';
 import { Driver } from 'src/app/models/Driver';
-import { environment } from 'src/environments/environments';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'

@@ -6,7 +6,7 @@ on:
       - master
 env:
     AZURE_WEBAPP_NAME: f1charts-frontend
-    AZURE_WEBAPP_PACKAGE_PATH: "f1charts-SPA/dist/f1charts-SPA"
+    AZURE_WEBAPP_PACKAGE_PATH: "f1charts-SPA/dist/f1charts-spa"
     NODE_VERSION: "20.x"
 
 jobs:

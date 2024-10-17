@@ -1,5 +1,5 @@
 {
-  "name": "f1charts",
+  "name": "backend",
   "version": "1.0.0",
   "description": "nodeJS server that makes API calls for F1 data. Server will query and send historical data and mock live data using historical data.",
   "main": "dist/server.js",

@@ -22,8 +22,6 @@ jobs:
       run: |
         npm ci
       working-directory: backend
-    - name: List directory contents
-      run: ls -R /home/runner/work/f1charts
       
     - name: npm build
       run: |

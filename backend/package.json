@@ -5,12 +5,12 @@
   "main": "dist/server.js",
   "type": "module",
   "scripts": {
-    "start": "tsx -r dotenv/config src/server.ts",
+    "start": "node -r dotenv/config dist/server.js",
     "test": "jest",
     "clear-build": "rimraf --glob './dist'",
     "build": "npm run clear-build & tsc",
     "start:dev": "nodemon",
-    "start-local": "node -r dotenv/config dist/server.js",
+    "start-local": "tsx -r dotenv/config src/server.ts",
     "lint": "eslint --fix --config configs/.eslint.json --ignore-path configs/.eslintignore .",
     "format": "prettier . --write --config configs/.prettierrc.json --ignore-path configs/.prettierignore"
   },

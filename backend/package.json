@@ -10,7 +10,6 @@
     "clear-build": "rimraf --glob './dist'",
     "build": "npm run clear-build & tsc",
     "start:dev": "nodemon",
-    "start-local": "tsx -r dotenv/config src/server.ts",
     "lint": "eslint --fix --config configs/.eslint.json --ignore-path configs/.eslintignore .",
     "format": "prettier . --write --config configs/.prettierrc.json --ignore-path configs/.prettierignore"
   },
